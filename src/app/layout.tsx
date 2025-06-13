@@ -18,6 +18,7 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('http://localhost:3000'),
   title: {
     default: 'Close The Loop - Membership-Based Virtual Cowork',
     template: '%s | Close The Loop',

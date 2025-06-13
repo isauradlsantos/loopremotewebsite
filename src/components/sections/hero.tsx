@@ -82,12 +82,10 @@ const Hero = () => {
         <div className="space-y-8 lg:space-y-12 relative z-10">
           <div>
             <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-              Beat remote work isolation with community now
-            </h1>
+            Structured remote coworking. Team-powered productivity.        </h1>
 
             <p className="text-sand-700 font-inter-tight mt-3 text-3xl leading-13 font-medium md:text-4xl lg:text-5xl">
-              The virtual cowork that gives you focus and structure.
-            </p>
+             Join a hand-matched cohort that keeps things moving.</p>
           </div>
 
           {/* Features */}
