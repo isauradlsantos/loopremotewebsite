@@ -77,7 +77,7 @@ export default function Logos() {
           Building focus and community for remote workers.
           <br />
           <span className="text-muted-foreground">
-            From ADHD entrepreneurs to distributed teams.
+            From ADHD entrepreneurs to freelancers and consultants.
           </span>
         </h2>
       </div>

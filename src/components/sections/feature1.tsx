@@ -30,7 +30,7 @@ export const Feature1 = () => {
       <div className="container relative z-10">
         <div className="flex flex-col gap-3 md:flex-row">
           <h2 className="flex-1 text-3xl leading-tight font-semibold tracking-tight text-balance md:text-4xl lg:text-5xl">
-            Built for the neurodivergent remote workforce
+          For neurodivergent remote professionals and anyone looking to beat isolation.
           </h2>
           <p className="text-muted-foreground flex-1 text-lg font-medium md:max-w-md md:self-end">
             Remote work isolation has surged since 2020, and neurodivergent professionals are spending hundreds monthly on fragmented tools without finding true community connection.

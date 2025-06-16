@@ -25,22 +25,22 @@ import { cn } from '@/lib/utils';
 const features = [
   {
     title: 'Daily focus sessions',
-    description: 'Body-doubling and timed focus work with your virtual coworkers.',
+    description: 'Timed sprints with your cohort. Body-doubling that turns individual tasks into shared momentum.',
     icon: CircleDot,
   },
   {
     title: 'Curated peer matching',
-    description: 'Work alongside inspiring, high-performing remote professionals.',
+    description: 'Work alongside inspiring, hand-picked top-performing remote pros who spark fresh ideas and keep motivation high.',
     icon: Diamond,
   },
   {
     title: 'ADHD-friendly structure',
-    description: 'Monday activation, async SCRUM, and executive function support.',
+    description: 'Team rituals. Monday activation, async SCRUM, executive-function prompts that keep group progress visible and steady.',
     icon: Blend,
   },
   {
     title: 'Systems coaching',
-    description: 'Monthly group coaching and quarterly 1-on-1 sessions included.',
+    description: 'Monthly group clinics, optional 1-on-1 productivity coaching, and team-building events lock in habits and keep the crew connected.',
     icon: ChartNoAxesColumn,
   },
 ];
@@ -82,10 +82,10 @@ const Hero = () => {
         <div className="space-y-8 lg:space-y-12 relative z-10">
           <div>
             <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-            Structured remote coworking. Team-powered productivity.        </h1>
+            Structured remote coworking. Maximum productivity.        </h1>
 
             <p className="text-sand-700 font-inter-tight mt-3 text-3xl leading-13 font-medium md:text-4xl lg:text-5xl">
-             Join a hand-matched cohort that keeps things moving.</p>
+            Join a hand-matched cohort that keeps things moving.</p>
           </div>
 
           {/* Features */}
