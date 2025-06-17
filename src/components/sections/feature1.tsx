@@ -3,18 +3,21 @@ import { Users, Brain, DollarSign } from 'lucide-react';
 export const Feature1 = () => {
   const ITEMS = [
     {
-      value: '1 in 5',
-      label: 'Workers feel daily loneliness',
+      value: '2×',
+      label: 'Task-completion doubles when working side-by-side with a cohort',
+      secondaryLabel: '1 in 5 remote professionals battles daily loneliness at work.',
       icon: Users,
     },
     {
-      value: '15.5M',
-      label: 'U.S. adults with ADHD diagnosis',
+      value: '35%',
+      label: 'Higher goal-hit rate through peer accountability',
+      secondaryLabel: 'Neurodivergent adults perform better with structure and community.',
       icon: Brain,
     },
     {
-      value: '€700/mo',
-      label: 'Typical ND freelancer tool spend',
+      value: '–60%',
+      label: 'Lower cost with CTL systems and community',
+      secondaryLabel: '€700 /mo wasted on apps that fix neither focus nor isolation.',
       icon: DollarSign,
     },
   ];
@@ -30,10 +33,10 @@ export const Feature1 = () => {
       <div className="container relative z-10">
         <div className="flex flex-col gap-3 md:flex-row">
           <h2 className="flex-1 text-3xl leading-tight font-semibold tracking-tight text-balance md:text-4xl lg:text-5xl">
-          For neurodivergent remote professionals and anyone looking to beat isolation.
+            For neurodivergent remote professionals and anyone looking to beat isolation.
           </h2>
           <p className="text-muted-foreground flex-1 text-lg font-medium md:max-w-md md:self-end">
-            Remote work isolation has surged since 2020, and neurodivergent professionals are spending hundreds monthly on fragmented tools without finding true community connection.
+            Remote work has surged since 2020, making isolation common for many. At the same time, diagnoses of ADHD and other neurodivergent conditions are rising, so more professionals are seeking the structure and community they need to perform at their best.
           </p>
         </div>
 
@@ -52,6 +55,9 @@ export const Feature1 = () => {
                 </div>
                 <div className="text-xl font-semibold tracking-tight text-gray-800">
                   {metric.label}
+                </div>
+                <div className="text-lg font-medium tracking-tight text-gray-600 mt-2">
+                  {metric.secondaryLabel}
                 </div>
               </div>
               {/* Small orange accent circle */}
