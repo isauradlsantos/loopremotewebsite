@@ -89,11 +89,11 @@ export default function Testimonials() {
           </h2>
           <div className="flex flex-1 flex-col items-start gap-3 md:max-w-md md:self-end">
             <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
-              Hear from neurodivergent remote workers who understand the daily struggles of isolation, executive function challenges, and fragmented productivity tools.
+            Our cohorts unite scientists, engineers, marketers, designers, consultants, writers, artists, and more, all hand-picked to spark inspiration and drive collective momentum.
             </p>
             <Button asChild variant="outline" className="group">
               <Link href="/community-stories">
-                Join Our Community Stories
+                Apply to join a cohort
                 <ArrowRight className="ml-2 size-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
