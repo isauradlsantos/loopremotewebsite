@@ -7,41 +7,41 @@ import { cn } from '@/lib/utils';
 
 const FEATURES = [
   {
-    title: 'Community access',
+    title: 'Exclusive Slack community',
     description: 'Private Slack workspace with curated channels for accountability and connection.',
     content: {
       title: 'Your virtual workspace for focused collaboration.',
-      description: `Join a carefully curated community of remote professionals who understand the challenges of working alone. Our private Slack includes dedicated channels for daily check-ins, focus sessions, and peer support.`,
+      description: `Join a hand-picked community of remote professionals who get the isolation struggle. Our private Slack features dedicated channels for daily check-ins, timed focus sessions, and peer support.`,
       image: '/images/homepage/features-tabs/1.webp',
       className: 'md:[&_img]:translate-x-20 [&_img]:translate-x-5 ',
     },
     icon: CircleDot,
   },
   {
-    title: 'Body-doubling sessions',
+    title: 'Cohort focus sessions',
     description: 'Virtual focus rooms with timed work sessions and accountability partners.',
     content: {
-      title: 'Focus better with virtual coworkers by your side.',
+      title: 'Focus better with your coworkers by your side.',
       description:
-        'Research-backed body-doubling sessions help ADHD brains stay on task. Join daily focus sessions, set intentions, and work alongside other motivated professionals in our virtual lobby.',
+        'Research-backed body-doubling sessions boost focus and engagement. Join daily sprints to set goals and collaborate live in our virtual lobby.',
       image: '/images/homepage/features-tabs/2.webp',
     },
     icon: Blend,
   },
   {
     title: 'Peer matching',
-    description: 'Algorithmically matched work partners based on complementary skills and goals.',
+    description: 'Hand-picked cohorts of top-performers aligned to your goals, igniting your best work.',
     content: {
       title: 'Work alongside inspiring, high-performing professionals.',
       description:
-        'Our curated peer clusters are intentionally matched based on work styles, goals, and complementary skills. Research shows sitting near high performers increases your output by 15%.',
+        'Our curated peer clusters are intentionally matched based on aspirations, work styles, goals, and complementary skills. Research shows sitting near high performers increases your output by 15%.',
       image: '/images/homepage/features-tabs/3.webp',
     },
     icon: Diamond,
   },
   {
     title: 'Systems coaching',
-    description: 'Monthly group sessions and quarterly 1-on-1 coaching for productivity optimization.',
+    description: 'Monthly group sessions and optional 1-on-1 coaching for productivity optimization.',
     content: {
       title: 'Build ADHD-friendly systems that actually work.',
       description:
@@ -61,7 +61,7 @@ export const Feature3 = () => {
             A complete solution for neurodivergent remote work
           </h2>
           <p className="text-muted-foreground flex-1 text-lg font-medium md:max-w-md md:self-end">
-            Close The Loop combines proven focus techniques, expert coaching, and curated community to address the unique challenges of ADHD and remote work isolation.
+          Close The Loop blends evidence-backed focus techniques, expert systems coaching, and hand-picked peer cohorts to solve isolation, executive-function gaps, and fragmented tool fatigue.
           </p>
         </div>
 

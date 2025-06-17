@@ -21,7 +21,7 @@ const ITEMS: ItemType[] = [
   {
     title: 'Structured daily rituals.',
     description:
-      'Monday activation calls, async SCRUM check-ins, and Friday team building activities keep you connected and accountable.',
+      'Begin your week with a Monday activation call, stay aligned through daily async SCRUM check-ins and timed focus sessions, and wrap up with Friday team-building activities that keep your cohort connected and accountable.',
     image: {
       src: '/images/homepage/resource-allocation/cycle-37.webp',
       alt: 'Daily ritual structure showing weekly accountability flow',
@@ -42,7 +42,7 @@ const ITEMS: ItemType[] = [
   {
     title: 'ADHD-friendly structure.',
     description:
-      'Executive function scaffolds designed specifically for neurodivergent remote professionals.',
+      'Executive-function support and accountability systems to help neurodivergent professionals and anyone maximize productivity.',
     image: {
       src: '/images/homepage/resource-allocation/access-controls.webp',
       alt: 'Structured interface showing ADHD-friendly features and accommodations',
@@ -64,7 +64,7 @@ const ITEMS: ItemType[] = [
   {
     title: 'Systems coaching.',
     description:
-      'Monthly group sessions and quarterly 1-on-1 coaching to optimize your personal productivity systems.',
+      'Monthly group clinics and optional 1-on-1 sessions to fine-tune workflows and reinforce lasting habits.',
     image: {
       src: '/images/homepage/resource-allocation/cycle-analysis.webp',
       alt: 'Coaching session showing productivity analysis and system optimization',

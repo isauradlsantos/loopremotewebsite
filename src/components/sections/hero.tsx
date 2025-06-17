@@ -85,7 +85,7 @@ const Hero = () => {
             Structured remote coworking. Maximum productivity.        </h1>
 
             <p className="text-sand-700 font-inter-tight mt-3 text-3xl leading-13 font-medium md:text-4xl lg:text-5xl">
-            Join a hand-matched cohort that keeps things moving.</p>
+            Join a hand-matched cohort that keeps things moving</p>
           </div>
 
           {/* Features */}
