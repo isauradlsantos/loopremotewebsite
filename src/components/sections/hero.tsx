@@ -113,7 +113,7 @@ const Hero = () => {
 
           <div className="flex flex-wrap items-center gap-4">
             <Button aria-label="Join the waitlist">Join the waitlist</Button>
-            <Link href="#early-bird">
+            <Link href="https://www.launchpass.com/close-the-loop/first-cohort">
               <Button
                 aria-label="Early bird: 50% off first cohort"
                 variant="outline"

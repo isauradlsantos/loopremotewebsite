@@ -11,50 +11,45 @@ import { cn } from '@/lib/utils';
 
 const plans = [
   {
-    name: 'Core',
-    monthlyPrice: '€129',
-    annualPrice: '€110',
+    name: 'Early bird: 50% off first cohort (limited offer)',
+    monthlyPrice: '€149',
     monthlyPerUnit: 'per month',
-    annualPerUnit: 'per month (billed annually)',
     features: [
-      'Private Slack community access',
-      'Daily focus sessions in virtual lobby',
-      'Monday activation calls',
+      'Access CTL Slack',
+      'Daily focus sessions',
+      'Monday activation call',
       'Async SCRUM check-ins',
-      'Curated peer matching',
+      'Group productivity clinic',
+      'Team-building activities',
     ],
     cta: 'Join waitlist',
   },
   {
-    name: 'Plus',
-    monthlyPrice: '€179',
-    annualPrice: '€152',
+    name: 'CTL Cohort Subscription',
+    monthlyPrice: '€299',
     monthlyPerUnit: 'per month',
-    annualPerUnit: 'per month (billed annually)',
     features: [
-      'All Core features and...',
-      'Monthly group accountability sessions',
-      'Operations consulting calls',
-      'Priority peer matching',
-      'Extended focus session hours',
-      'Community events & rituals',
+      'Access CTL Slack',
+      'Daily focus sessions',
+      'Monday activation call',
+      'Async SCRUM check-ins',
+      'Group productivity clinic',
+      'Team-building activities',
     ],
     cta: 'Join waitlist',
     popular: true,
   },
   {
-    name: 'Pro',
-    monthlyPrice: '€249',
-    annualPrice: '€212',
+    name: 'Productivity Coaching + CTL Cohort Subscription',
+    monthlyPrice: '€399',
     monthlyPerUnit: 'per month',
-    annualPerUnit: 'per month (billed annually)',
     features: [
-      'All Plus features and...',
-      'Quarterly 1-on-1 coaching sessions',
-      'Personal systems optimization',
-      'Executive function training',
-      'Direct access to founders',
-      'Custom peer group formation',
+      '1-on-1 productivity coaching + Group clinic',
+      'Access CTL Slack',
+      'Daily focus sessions',
+      'Monday activation call',
+      'Async SCRUM check-ins',
+      'Team-building activities',
     ],
     cta: 'Join waitlist',
   },
@@ -65,8 +60,6 @@ export default function Pricing({
 }: {
   headerTag?: 'h1' | 'h2';
 }) {
-  const [isAnnual, setIsAnnual] = useState(true);
-
   return (
     <section className="py-16 md:py-28 lg:py-32">
       <div className="container">
@@ -83,14 +76,6 @@ export default function Pricing({
           <p className="text-muted-foreground text-lg text-balance">
             Join a curated community of remote professionals who understand the challenges of working alone. 40-60% cheaper than assembling individual apps and coaching.
           </p>
-          <div className="inline-flex items-center gap-2">
-            <Switch
-              checked={isAnnual}
-              onCheckedChange={setIsAnnual}
-              aria-label="Toggle annual billing"
-            />
-            <span className="text-sm font-medium">Billed annually</span>
-          </div>
         </div>
 
         <div className="mt-8 grid gap-8 sm:grid-cols-2 md:mt-12 lg:mt-20 lg:grid-cols-3">
@@ -120,10 +105,8 @@ export default function Pricing({
                       "text-muted-foreground text-lg font-medium",
                       plan.popular && "text-orange-600"
                     )}>
-                      {isAnnual ? plan.annualPrice : plan.monthlyPrice}
-                      {(plan.monthlyPerUnit || plan.annualPerUnit) &&
-                        ' ' +
-                          (isAnnual ? plan.annualPerUnit : plan.monthlyPerUnit)}
+                      {plan.monthlyPrice}
+                      {plan.monthlyPerUnit && ' ' + plan.monthlyPerUnit}
                     </p>
                   </div>
                 </CardHeader>

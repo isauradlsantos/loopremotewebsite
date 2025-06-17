@@ -26,42 +26,41 @@ import { cn } from '@/lib/utils';
 const TESTIMONIALS = [
   {
     quote:
-      "Working from home felt like being productive in a vacuum. I was spending €300+ monthly on coaching and apps but still felt completely isolated from other professionals.",
-    author: 'Sarah Chen, UX Designer',
-    company: 'Freelance',
-    image: '/images/homepage/testimonials/amy-chase.webp',
-    className: 'object-top',
-  },
-
-  {
-    quote:
-      'The hardest part about ADHD and remote work is the lack of external structure. I needed body-doubling and accountability, but all the tools felt fragmented.',
-    author: 'Marcus Rodriguez, Software Engineer',
-    company: 'Remote Contractor',
-    image: '/images/homepage/testimonials/victoria-smith.webp',
-  },
-  {
-    quote:
-      'I was juggling Focusmate, Flow Club, ADHD coaching, and three different productivity apps. It was expensive chaos - I needed everything integrated.',
-    author: 'Emma Thompson, Marketing Consultant',
-    company: 'Freelance',
-    image: '/images/homepage/testimonials/kevin-yam.webp',
+      "Throughout my career I've helped fund and build solutions for Europe's biggest challenges—climate, digitalization, health, sustainability—but at their heart, it's always been about empowering people.",
+    author: 'Diogo Pinto, PhD',
+    company: 'Project Acquisition Coordinator',
+    image: '/images/homepage/testimonials/diogo-pinto2.png',
     className: 'object-top',
   },
   {
     quote:
-      'Remote work loneliness is real. I missed the energy of working around other driven people, but coworking spaces didn\'t work with my ADHD brain.',
-    author: 'David Park, Product Manager',
-    company: 'Remote Employee',
-    image: '/images/homepage/testimonials/kundo-marta.webp',
+      "A trained biologist turned into innovation, entrepreneurship and ecosystem manager after several (positive) twists. I am a natural communicator, a story-teller, who loves to work with and for people.",
+    author: 'Inês Matias',
+    company: 'Ecosystem Lead for Open Innovation Industry Partnerships',
+    image: '/images/homepage/testimonials/ines-matias1.png',
+  },
+  {
+    quote:
+      "I am a million things at the same time: I work with amazing clients on driving growth to their businesses, I manage my own business, and I am a recording artist. It's fun!",
+    author: 'Isaura Santos',
+    company: 'Fractional Marketing, Operations, and Business Consultant & Music Artist',
+    image: '/images/homepage/testimonials/isaura-santos2.png',
     className: 'object-top',
   },
   {
     quote:
-      'Executive function challenges make remote work extra hard. I needed systems coaching, not just generic productivity tips from YouTube.',
-    author: 'Lisa Williams, Content Strategist',
-    company: 'Digital Nomad',
-    image: '/images/homepage/testimonials/jonas-kotara.webp',
+      "After more than 10 years writing about science, I get a kick out of turning dense medical research into clear, compelling stories that anyone can dive into (and actually enjoy).",
+    author: 'And de Barros, PhD',
+    company: 'Managing Science Editor',
+    image: '/images/homepage/testimonials/ana-barros.png',
+    className: 'object-top',
+  },
+  {
+    quote:
+      "While running operations and production at Nebula Studios, I partner with creatives to bring animation and film projects from concept to screen. Damn, I love my job!",
+    author: 'Liliana Ramires',
+    company: 'COO & Film Producer',
+    image: '/images/homepage/testimonials/liliana-ramires.png',
     className: 'object-top',
   },
 ];
@@ -83,13 +82,13 @@ export default function Testimonials() {
       <div className="container">
         <div className="flex flex-col gap-3 md:flex-row">
           <h2 className="flex-1 text-3xl font-semibold tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-6xl">
-            Built for remote
+            Meet fellow remote
             <br />
             professionals like you
           </h2>
           <div className="flex flex-1 flex-col items-start gap-3 md:max-w-md md:self-end">
             <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
-            Our cohorts unite scientists, engineers, marketers, designers, consultants, writers, artists, and more, all hand-picked to spark inspiration and drive collective momentum.
+              Our cohorts unite scientists, engineers, marketers, designers, consultants, writers, artists, and more, all hand-picked to spark inspiration and drive collective momentum.
             </p>
             <Button asChild variant="outline" className="group">
               <Link href="/community-stories">
@@ -109,12 +108,12 @@ export default function Testimonials() {
             setApi={setApi}
             className="w-full"
           >
-            <div className="relative -mr-[max(2rem,calc((100vw-80rem)/2+5rem))]">
-              <CarouselContent className="">
+            <div className="relative">
+              <CarouselContent className="-ml-4">
                 {TESTIMONIALS.map((testimonial, index) => (
                   <CarouselItem
                     key={index}
-                    className="basis-4/5 md:basis-1/2 lg:basis-[34%]"
+                    className="pl-4 basis-full md:basis-1/2 lg:basis-1/3"
                   >
                     <Card
                       className={`h-full overflow-hidden border-[7px] transition-all ${
@@ -124,11 +123,7 @@ export default function Testimonials() {
                       }`}
                     >
                       <CardHeader className="p-0">
-                        <div
-                          className={cn(
-                            'relative aspect-[4/3.3] w-full bg-emerald-600/20',
-                          )}
-                        >
+                        <div className="relative aspect-[4/3.3] w-full bg-emerald-600/20">
                           <div className="absolute inset-0">
                             <Image
                               src={testimonial.image}
@@ -137,7 +132,7 @@ export default function Testimonials() {
                               className={cn(
                                 'object-cover transition-all',
                                 testimonial.className,
-                                current != index && 'mix-blend-luminosity',
+                                current !== index && 'mix-blend-luminosity'
                               )}
                             />
                           </div>
@@ -162,16 +157,16 @@ export default function Testimonials() {
               </CarouselContent>
             </div>
 
-            <div className="container">
-              <div className="mt-8 flex items-center justify-between gap-4">
+            <div className="container mt-8">
+              <div className="flex items-center justify-between gap-4">
                 <div className="flex gap-2">
                   {TESTIMONIALS.map((_, index) => (
                     <button
                       key={index}
-                      className={`size-4 rounded-full transition-colors ${
+                      className={`size-3 rounded-full transition-colors ${
                         current === index
-                          ? 'bg-background'
-                          : 'bg-background/40 hover:bg-background/60'
+                          ? 'bg-foreground'
+                          : 'bg-foreground/40 hover:bg-foreground/60'
                       }`}
                       onClick={() => api?.scrollTo(index)}
                       aria-label={`Go to testimonial ${index + 1}`}
@@ -180,8 +175,8 @@ export default function Testimonials() {
                 </div>
 
                 <div className="flex gap-2">
-                  <CarouselPrevious className="bg-background/40 hover:bg-background/60 static size-11 translate-y-0 [&>svg]:size-6" />
-                  <CarouselNext className="bg-background/40 hover:bg-background/60 static size-11 translate-y-0 [&>svg]:size-6" />
+                  <CarouselPrevious className="relative bg-foreground/40 hover:bg-foreground/60 size-10 translate-y-0 [&>svg]:size-5 border-2 border-foreground/20 hover:border-foreground/40" />
+                  <CarouselNext className="relative bg-foreground/40 hover:bg-foreground/60 size-10 translate-y-0 [&>svg]:size-5 border-2 border-foreground/20 hover:border-foreground/40" />
                 </div>
               </div>
             </div>
