@@ -20,11 +20,11 @@ const interTight = Inter_Tight({
 export const metadata: Metadata = {
   metadataBase: new URL('http://localhost:3000'),
   title: {
-    default: 'Close The Loop - Membership-Based Virtual Cowork',
+    default: 'Close The Loop | Remote Coworking Community',
     template: '%s | Close The Loop',
   },
   description:
-    'Beat remote work isolation with Close The Loop. Membership-based virtual cowork that bundles focus sessions, curated community, and systems coaching for neurodivergent remote professionals.',
+    'Close The Loop is a neurodivergent-friendly, membership-based virtual coworking community that boosts your productivity, pairs you with inspiring cohorts, and helps you beat remote work isolation.',
   keywords: [
     'virtual cowork',
     'remote work community',
@@ -38,6 +38,11 @@ export const metadata: Metadata = {
     'ADHD community',
     'productivity coaching',
     'remote accountability',
+    'remote cowork',
+    'remote coworking',
+    'remote community',
+    'work with me',
+    'study with me',
   ],
   authors: [{ name: 'Close The Loop Team' }],
   creator: 'Close The Loop Team',
