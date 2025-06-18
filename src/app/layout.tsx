@@ -48,12 +48,23 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon/favicon-96x96.png?v=2', sizes: '96x96', type: 'image/png' },
-      { url: '/favicon/favicon.svg?v=2', type: 'image/svg+xml' },
-      { url: '/favicon/favicon.ico?v=2', sizes: '48x48' },
+      { url: '/favicon/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/favicon/favicon-96x96.png', sizes: '48x48', type: 'image/png' },
+      { url: '/favicon/favicon-96x96.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon/favicon-96x96.png', sizes: '16x16', type: 'image/png' },
     ],
-    apple: [{ url: '/favicon/apple-touch-icon.png?v=2', sizes: '180x180' }],
-    shortcut: [{ url: '/favicon/favicon-96x96.png?v=2' }],
+    apple: [
+      { url: '/favicon/favicon-96x96.png', sizes: '180x180', type: 'image/png' },
+      { url: '/favicon/favicon-96x96.png', sizes: '152x152', type: 'image/png' },
+      { url: '/favicon/favicon-96x96.png', sizes: '120x120', type: 'image/png' },
+    ],
+    shortcut: [{ url: '/favicon/favicon-96x96.png' }],
+    other: [
+      {
+        rel: 'mask-icon',
+        url: '/favicon/11.png',
+      },
+    ],
   },
   openGraph: {
     title: 'Close The Loop - Virtual Cowork for Remote Professionals',
@@ -88,6 +99,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon/11.png" />
+        <link rel="apple-touch-icon" href="/favicon/11.png" />
+      </head>
       <body
         className={`h-screen ${inter.variable} ${interTight.variable} antialiased`}
       >

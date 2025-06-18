@@ -36,7 +36,7 @@ export const Feature1 = () => {
             For neurodivergent remote professionals and anyone looking to beat isolation
           </h2>
           <p className="text-muted-foreground flex-1 text-lg font-medium md:max-w-md md:self-end">
-            Remote work has surged since 2020, making isolation common for many. At the same time, diagnoses of ADHD and other neurodivergent conditions are rising, so more professionals are seeking the structure and community they need to perform at their best.
+            Remote work has surged since 2020, making isolation common for many. At the same time, neurodivergent diagnoses are rising. CTL mixes neurodivergent and neurotypical members because sharing experiences drives deeper connection, stronger accountability, and lasting productivity.
           </p>
         </div>
 

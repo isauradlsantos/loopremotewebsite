@@ -40,24 +40,24 @@ const Navbar = () => {
 
   const ITEMS = [
     {
-      label: 'Product',
-      href: '#product',
+      label: 'Resources',
+      href: '#resources',
       dropdownItems: [
         {
-          title: 'Feature1',
-          href: '/#feature1',
+          title: 'The CTL Approach',
+          href: '/resources/ctl-approach',
           description:
-            'Streamline is built on the habits that make the best product teams successful',
+            'Learn about our unique Close The Loop methodology for remote work productivity',
         },
         {
-          title: 'Feature2',
-          href: '/#feature2',
-          description: 'Streamline your resource allocation and execution',
+          title: 'Productivity Tips',
+          href: '/resources/productivity-tips',
+          description: 'Actionable strategies to boost your remote work productivity',
         },
         {
-          title: 'Feature3',
-          href: '/#feature3',
-          description: 'Streamline your feature development',
+          title: 'Remote Work Success',
+          href: '/resources/remote-success',
+          description: 'Real stories and proven methods for thriving in remote work',
         },
       ],
     },

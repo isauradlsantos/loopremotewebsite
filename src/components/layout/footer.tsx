@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { Facebook, Linkedin, Twitter } from 'lucide-react';
+import { Instagram, Linkedin, Slack } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 
@@ -38,9 +38,9 @@ const navigation = [
 ];
 
 const socialLinks = [
-  { icon: Facebook, href: 'https://facebook.com' },
-  { icon: Twitter, href: 'https://twitter.com' },
+  { icon: Instagram, href: 'https://instagram.com' },
   { icon: Linkedin, href: 'https://linkedin.com' },
+  { icon: Slack, href: 'https://slack.com' },
 ];
 
 export const Footer = () => {
@@ -49,7 +49,7 @@ export const Footer = () => {
       <div className="bg-primary">
         <div className="border-sand-600 mx-auto flex max-w-[95vw] flex-col items-center border-b py-10 text-center md:py-14 lg:py-20">
           <h2 className="max-w-[800px] text-5xl leading-none font-semibold tracking-tight text-balance lg:text-6xl">
-            Your remote work community awaits.{' '}
+            Your new remote work team awaits.{' '}
             <span style={{ color: '#e24d20' }}>Close the loop.</span>
           </h2>
           <Button asChild variant="secondary" size="lg" className="mt-9">
@@ -58,7 +58,7 @@ export const Footer = () => {
         </div>
 
         {/* Navigation Section */}
-        <nav className="border-sand-600/50 mx-auto max-w-[95vw] border-b py-6">
+        {/* <nav className="border-sand-600/50 mx-auto max-w-[95vw] border-b py-6">
           <div className="container flex flex-wrap gap-x-32 gap-y-20 md:justify-end md:gap-y-24 lg:gap-y-32">
             {navigation.map((section) => (
               <div key={section.title}>
@@ -78,7 +78,7 @@ export const Footer = () => {
               </div>
             ))}
           </div>
-        </nav>
+        </nav> */}
 
         {/* Bottom Section */}
         <div className="container py-8">
@@ -90,7 +90,7 @@ export const Footer = () => {
                 className="underline transition-opacity hover:opacity-80"
                 target="_blank"
               >
-                Virtual Cowork Community
+                Remote Co-Working Community
               </Link>
             </p>
             <div className="flex items-center gap-6">

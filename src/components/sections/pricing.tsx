@@ -15,12 +15,41 @@ const plans = [
     monthlyPrice: '€149',
     monthlyPerUnit: 'per month',
     features: [
-      'Access CTL Slack',
-      'Daily focus sessions',
-      'Monday activation call',
-      'Async SCRUM check-ins',
-      'Group productivity clinic',
-      'Team-building activities',
+      {
+        name: 'Access CTL Slack',
+        included: true,
+        limit: 'Full access'
+      },
+      {
+        name: 'Daily focus sessions',
+        included: true,
+        limit: 'Unlimited'
+      },
+      {
+        name: 'Monday activation call',
+        included: true,
+        limit: 'Weekly'
+      },
+      {
+        name: 'Async SCRUM check-ins',
+        included: true,
+        limit: 'Daily'
+      },
+      {
+        name: 'Group productivity clinic',
+        included: true,
+        limit: 'Monthly'
+      },
+      {
+        name: 'Team-building activities',
+        included: true,
+        limit: 'Weekly'
+      },
+      {
+        name: '1-on-1 productivity coaching',
+        included: false,
+        limit: 'Not included'
+      }
     ],
     cta: 'Join waitlist',
   },
@@ -29,12 +58,41 @@ const plans = [
     monthlyPrice: '€299',
     monthlyPerUnit: 'per month',
     features: [
-      'Access CTL Slack',
-      'Daily focus sessions',
-      'Monday activation call',
-      'Async SCRUM check-ins',
-      'Group productivity clinic',
-      'Team-building activities',
+      {
+        name: 'Access CTL Slack',
+        included: true,
+        limit: 'Full access'
+      },
+      {
+        name: 'Daily focus sessions',
+        included: true,
+        limit: 'Unlimited'
+      },
+      {
+        name: 'Monday activation call',
+        included: true,
+        limit: 'Weekly'
+      },
+      {
+        name: 'Async SCRUM check-ins',
+        included: true,
+        limit: 'Daily'
+      },
+      {
+        name: 'Group productivity clinic',
+        included: true,
+        limit: 'Monthly'
+      },
+      {
+        name: 'Team-building activities',
+        included: true,
+        limit: 'Weekly'
+      },
+      {
+        name: '1-on-1 productivity coaching',
+        included: false,
+        limit: 'Not included'
+      }
     ],
     cta: 'Join waitlist',
     popular: true,
@@ -44,12 +102,41 @@ const plans = [
     monthlyPrice: '€399',
     monthlyPerUnit: 'per month',
     features: [
-      '1-on-1 productivity coaching + Group clinic',
-      'Access CTL Slack',
-      'Daily focus sessions',
-      'Monday activation call',
-      'Async SCRUM check-ins',
-      'Team-building activities',
+      {
+        name: 'Access CTL Slack',
+        included: true,
+        limit: 'Full access'
+      },
+      {
+        name: 'Daily focus sessions',
+        included: true,
+        limit: 'Unlimited'
+      },
+      {
+        name: 'Monday activation call',
+        included: true,
+        limit: 'Weekly'
+      },
+      {
+        name: 'Async SCRUM check-ins',
+        included: true,
+        limit: 'Daily'
+      },
+      {
+        name: 'Group productivity clinic',
+        included: true,
+        limit: 'Monthly'
+      },
+      {
+        name: 'Team-building activities',
+        included: true,
+        limit: 'Weekly'
+      },
+      {
+        name: '1-on-1 productivity coaching',
+        included: true,
+        limit: 'Bi-Weekly (60 min sessions)'
+      }
     ],
     cta: 'Join waitlist',
   },
@@ -121,10 +208,22 @@ export default function Pricing({
 
                   <div className="space-y-4">
                     {plan.features.map((feature) => (
-                      <div key={feature} className="flex items-center gap-3">
-                        <Check className="size-4 shrink-0" />
-                        <span className="text-muted-foreground text-sm">
-                          {feature}
+                      <div key={feature.name} className="flex flex-col gap-1">
+                        <div className="flex items-center gap-3">
+                          <Check className={cn(
+                            "size-4 shrink-0",
+                            feature.included ? "text-green-500" : "text-gray-400"
+                          )} />
+                          <span className={cn(
+                            "text-sm",
+                            feature.included ? "text-foreground" : "text-muted-foreground",
+                            plan.name === "Productivity Coaching + CTL Cohort Subscription" && feature.name === "1-on-1 productivity coaching" && "font-bold"
+                          )}>
+                            {feature.name}
+                          </span>
+                        </div>
+                        <span className="text-xs text-muted-foreground pl-7">
+                          {feature.limit}
                         </span>
                       </div>
                     ))}

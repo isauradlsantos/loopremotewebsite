@@ -9,27 +9,27 @@ const leftQuestions = [
   {
     question: 'What is Close The Loop?',
     answer:
-      'Close The Loop is a membership-based virtual cowork community designed for neurodivergent remote professionals. We bundle focus scaffolds, curated peer matching, and systems coaching to address remote work isolation and executive function challenges.',
+      'Close The Loop is a membership-based virtual coworking community built around hand-matched cohorts of 10–15 remote professionals. You get private Slack access, daily focus sprints, ADHD-friendly rituals, and optional expert coaching—so you never work alone again.',
   },
   {
     question: 'How is this different from other virtual coworking apps?',
     answer:
-      'Unlike generic platforms like Focusmate or Flow Club, we provide curated peer matching, ADHD-specific structure with Monday activation calls and async SCRUM, plus expert systems coaching - all in one integrated community.',
+      'Close The Loop is a comprehensive approach to remote work. When you join CTL, you become part of a dedicated team and a vibrant community of hand-picked peers who inspire you and achieve goals alongside you. It is more than a service for random focus sessions; it is an exceptional group of professionals who quickly become your new work family.',
   },
   {
     question: 'Do I need an ADHD diagnosis to join?',
     answer:
-      'No diagnosis required! While we\'re designed with neurodivergent professionals in mind, anyone struggling with remote work isolation, executive function challenges, or seeking structured accountability is welcome.',
+      'No. CTL is highly focused on supporting neurodivergent professionals, but our cohorts mix neurodivergent and neurotypical members. By sharing experiences across perspectives, everyone gains fresh strategies, built-in accountability, and stronger teamwork.',
   },
   {
     question: 'What does "body-doubling" mean?',
     answer:
-      'Body-doubling is working alongside others virtually to improve focus and accountability. Our timed focus sessions provide this proven ADHD strategy, helping members stay on task and feel less isolated.',
+      'Body-doubling is working side-by-side (virtually) with your cohort in timed focus sessions. Seeing and hearing peers boosts accountability, sharpens focus, and makes tasks feel more manageable.',
   },
   {
     question: 'How do you match peers in the community?',
     answer:
-      'We use intentional matching based on work styles, goals, and complementary skills. Research shows sitting near high performers increases output by 15% - we apply this digitally through our curated peer clusters.',
+      'Each week we hand-pick new members into cohorts based on:\n\nYour role, industry, and top goals\n\nTime-zone and preferred focus hours\n\nComplementary skills, experience level, and ambition',
   },
 ];
 
@@ -37,22 +37,22 @@ const rightQuestions = [
   {
     question: 'What if I can\'t make the scheduled sessions?',
     answer:
-      'All tiers include flexible scheduling. Core members get daily focus sessions at multiple times, Plus members get extended hours, and Pro members can request custom session times with their peer groups.',
+      'Our virtual lobby stays open all day, every day, so you can drop into any focus sprint. Async SCRUM check-ins let you stay aligned even when you can\'t join live.',
   },
   {
     question: 'Is there a money-back guarantee?',
     answer:
-      'Yes! Our early cohort includes a "refund if not helpful" guarantee. We\'re confident in our approach, but we understand this investment needs to deliver real value for your work and wellbeing.',
+      'Yes. Commit for one month, and if you\'re not satisfied, we\'ll refund your full membership fee—no questions asked.',
   },
   {
     question: 'How does the systems coaching work?',
     answer:
-      'Plus members get monthly group coaching sessions focused on productivity systems and executive function. Pro members also receive quarterly 1-on-1 sessions for personalized systems optimization and ADHD-friendly workflow design.',
+      'Systems coaching includes:\n\nMonthly group clinics to diagnose workflow roadblocks and share best practices\n\nOptional one-on-one sessions (with the Productivity Coaching add-on) to develop custom workflows and troubleshoot your unique challenges',
   },
   {
     question: 'Can I try before committing to a full membership?',
     answer:
-      'We\'re launching with a special early-bird cohort at 50% off to test our approach. This gives you full access to experience the community and structure before our regular pricing begins.',
+      'Absolutely. We offer a limited-time early-bird pilot at 50% off your first cohort. If it\'s not a fit, you can cancel or request a refund before regular billing begins.',
   },
 ];
 

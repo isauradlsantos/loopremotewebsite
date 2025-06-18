@@ -15,31 +15,37 @@ interface FeatureSection {
   category: string;
   features: {
     name: string;
-    free: string | boolean;
-    startup: string | boolean;
-    enterprise: string | boolean;
+    earlyBird: boolean;
+    ctlCohort: boolean;
+    productivityCoaching: boolean;
   }[];
 }
 
 const pricingPlans = [
   {
-    name: 'Free',
+    name: 'Early Bird',
+    price: '€149',
+    description: 'Limited seats',
     button: {
-      text: 'Get started',
+      text: 'Join waitlist',
       variant: 'outline' as const,
     },
   },
   {
-    name: 'Startup',
+    name: 'CTL Cohort',
+    price: '€299',
+    description: '',
     button: {
-      text: 'Get started',
+      text: 'Join waitlist',
       variant: 'outline' as const,
     },
   },
   {
-    name: 'Enterprise',
+    name: 'Productivity Coaching',
+    price: '€399',
+    description: '',
     button: {
-      text: 'Get a demo',
+      text: 'Join waitlist',
       variant: 'outline' as const,
     },
   },
@@ -47,102 +53,101 @@ const pricingPlans = [
 
 const comparisonFeatures: FeatureSection[] = [
   {
-    category: 'Usage',
+    category: 'Community',
     features: [
       {
-        name: 'Members',
-        free: 'Unlimited',
-        startup: 'Unlimited',
-        enterprise: 'Unlimited',
+        name: 'Access CTL Slack',
+        earlyBird: true,
+        ctlCohort: true,
+        productivityCoaching: true,
       },
       {
-        name: 'Transactions',
-        free: '250',
-        startup: 'Unlimited',
-        enterprise: 'Unlimited',
+        name: 'Hand-Matched Peer Cohorts',
+        earlyBird: true,
+        ctlCohort: true,
+        productivityCoaching: true,
       },
       {
-        name: 'Teams',
-        free: '2',
-        startup: 'Unlimited',
-        enterprise: 'Unlimited',
+        name: 'Curated Peer Matching',
+        earlyBird: true,
+        ctlCohort: true,
+        productivityCoaching: true,
       },
     ],
   },
   {
-    category: 'Features',
+    category: 'Productivity Sessions',
     features: [
       {
-        name: 'Reporting',
-        free: true,
-        startup: true,
-        enterprise: true,
+        name: 'Daily Focus Sprints',
+        earlyBird: true,
+        ctlCohort: true,
+        productivityCoaching: true,
       },
       {
-        name: 'Analytics',
-        free: true,
-        startup: true,
-        enterprise: true,
+        name: 'Monday Activation Call',
+        earlyBird: true,
+        ctlCohort: true,
+        productivityCoaching: true,
       },
       {
-        name: 'Import and export',
-        free: true,
-        startup: true,
-        enterprise: true,
+        name: 'Async SCRUM Check-ins',
+        earlyBird: true,
+        ctlCohort: true,
+        productivityCoaching: true,
       },
       {
-        name: 'Integrations',
-        free: true,
-        startup: true,
-        enterprise: true,
-      },
-      {
-        name: 'Streamline AI',
-        free: false,
-        startup: true,
-        enterprise: true,
-      },
-      {
-        name: 'Admin roles',
-        free: false,
-        startup: false,
-        enterprise: false,
-      },
-      {
-        name: 'Audit log',
-        free: false,
-        startup: false,
-        enterprise: false,
+        name: 'Body-Doubling Focus Rooms',
+        earlyBird: true,
+        ctlCohort: true,
+        productivityCoaching: true,
       },
     ],
   },
   {
-    category: 'Support',
+    category: 'Coaching & Accountability',
     features: [
       {
-        name: 'Priority Support',
-        free: true,
-        startup: true,
-        enterprise: true,
+        name: 'Monthly Group Productivity Clinic',
+        earlyBird: true,
+        ctlCohort: true,
+        productivityCoaching: true,
       },
       {
-        name: 'Account Manager',
-        free: false,
-        startup: false,
-        enterprise: true,
+        name: '1-on-1 Productivity Coaching',
+        earlyBird: false,
+        ctlCohort: false,
+        productivityCoaching: true,
       },
       {
-        name: 'Uptime SLA',
-        free: false,
-        startup: false,
-        enterprise: true,
+        name: 'Team-Building Activities',
+        earlyBird: true,
+        ctlCohort: true,
+        productivityCoaching: true,
+      },
+    ],
+  },
+  {
+    category: 'Special Offers',
+    features: [
+      {
+        name: 'Pricing Discount (First Cohort)',
+        earlyBird: true,
+        ctlCohort: false,
+        productivityCoaching: false,
+      },
+      {
+        name: 'Money-Back Guarantee (1st month)',
+        earlyBird: true,
+        ctlCohort: true,
+        productivityCoaching: true,
       },
     ],
   },
 ];
 
 const Pricing2 = () => {
-  const [selectedPlan, setSelectedPlan] = useState(1); // Default to Startup plan
+  const [selectedPlan, setSelectedPlan] = useState(1); // Default to CTL Cohort plan
 
   return (
     <section className="pb-16 md:pb-28 lg:pb-32">
@@ -216,10 +221,14 @@ const PlanHeaders = ({
         <div className="col-span-1"></div>
         {pricingPlans.map((plan, index) => (
           <div key={index} className="flex flex-col">
-            <h3 className="mb-4 text-2xl font-semibold">{plan.name}</h3>
-            <Button variant="outline" className="w-fit">
+            <h3 className="mb-2 text-2xl font-semibold">{plan.name}</h3>
+            <p className="mb-4 text-3xl font-bold">{plan.price}</p>
+            <Button variant="outline" className="w-fit mb-4">
               {plan.button.text}
             </Button>
+            {plan.description && (
+              <p className="text-sm text-muted-foreground">{plan.description}</p>
+            )}
           </div>
         ))}
       </div>
@@ -245,41 +254,45 @@ const FeatureSections = ({ selectedPlan }: { selectedPlan: number }) => (
               <div className="flex items-center gap-1 py-3">
                 {(() => {
                   const value = [
-                    feature.free,
-                    feature.startup,
-                    feature.enterprise,
+                    feature.earlyBird,
+                    feature.ctlCohort,
+                    feature.productivityCoaching,
                   ][selectedPlan];
-                  return typeof value === 'boolean' ? (
-                    value ? (
-                      <Check className="text-primary/80 size-5" />
-                    ) : null
+                  return value ? (
+                    <Check className="size-4 text-green-500" />
                   ) : (
-                    <div className="flex items-center gap-1">
-                      <Check className="text-primary/80 size-4" />
-                      <span>{value}</span>
-                    </div>
+                    <span className="text-muted-foreground">—</span>
                   );
                 })()}
               </div>
             </div>
             {/* Desktop View - All Plans */}
-            <div className="hidden md:col-span-3 md:grid md:grid-cols-3">
-              {[feature.free, feature.startup, feature.enterprise].map(
-                (value, i) => (
-                  <div key={i} className="flex items-center py-3">
-                    {typeof value === 'boolean' ? (
-                      value ? (
-                        <Check className="text-primary/80 size-5" />
-                      ) : null
-                    ) : (
-                      <div className="flex items-center gap-1">
-                        <Check className="text-primary/80 size-4" />
-                        <span>{value}</span>
-                      </div>
-                    )}
-                  </div>
-                ),
-              )}
+            <div className="hidden md:block">
+              <div className="flex items-center gap-1 py-3">
+                {feature.earlyBird ? (
+                  <Check className="size-4 text-green-500" />
+                ) : (
+                  <span className="text-muted-foreground">—</span>
+                )}
+              </div>
+            </div>
+            <div className="hidden md:block">
+              <div className="flex items-center gap-1 py-3">
+                {feature.ctlCohort ? (
+                  <Check className="size-4 text-green-500" />
+                ) : (
+                  <span className="text-muted-foreground">—</span>
+                )}
+              </div>
+            </div>
+            <div className="hidden md:block">
+              <div className="flex items-center gap-1 py-3">
+                {feature.productivityCoaching ? (
+                  <Check className="size-4 text-green-500" />
+                ) : (
+                  <span className="text-muted-foreground">—</span>
+                )}
+              </div>
             </div>
           </div>
         ))}
