@@ -59,6 +59,11 @@ const Navbar = () => {
           href: '/resources/remote-success',
           description: 'Real stories and proven methods for thriving in remote work',
         },
+        {
+          title: 'Pomodoro Timer',
+          href: '/resources/pomodoro-timer',
+          description: 'Use our built-in Pomodoro timer to boost your focus and productivity',
+        },
       ],
     },
     { label: 'Pricing', href: '/pricing' },
@@ -147,6 +152,12 @@ const Navbar = () => {
           {/* Auth Buttons */}
           <div className="flex items-center gap-2.5">
             <Link
+              href="/resources/pomodoro-timer"
+              className={`transition-opacity duration-300 ${isMenuOpen ? 'max-lg:pointer-events-none max-lg:opacity-0' : 'opacity-100'}`}
+            >
+              <Button variant="default">Pomodoro Timer</Button>
+            </Link>
+            <Link
               href="/waitlist"
               className={`transition-opacity duration-300 ${isMenuOpen ? 'max-lg:pointer-events-none max-lg:opacity-0' : 'opacity-100'}`}
             >
@@ -194,6 +205,15 @@ const Navbar = () => {
         )}
       >
         <div className="mt-8 space-y-2">
+          <Link
+            href="/resources/pomodoro-timer"
+            className="block"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <Button size="sm" className="w-full" variant="default">
+              Pomodoro Timer
+            </Button>
+          </Link>
           <Link
             href="/waitlist"
             className="block"
