@@ -146,16 +146,11 @@ const Navbar = () => {
 
           {/* Auth Buttons */}
           <div className="flex items-center gap-2.5">
-            <Link href="/signup" className="hidden lg:block">
-              <Button variant="ghost" className="text-muted-foreground">
-                Sign up
-              </Button>
-            </Link>
             <Link
-              href="/login"
+              href="/waitlist"
               className={`transition-opacity duration-300 ${isMenuOpen ? 'max-lg:pointer-events-none max-lg:opacity-0' : 'opacity-100'}`}
             >
-              <Button variant="outline">Login</Button>
+              <Button variant="outline">Join the waitlist</Button>
             </Link>
             <div
               className={`transition-opacity duration-300 ${isMenuOpen ? 'max-lg:pointer-events-none max-lg:opacity-0' : 'opacity-100'}`}
@@ -200,21 +195,12 @@ const Navbar = () => {
       >
         <div className="mt-8 space-y-2">
           <Link
-            href="/signup"
-            className="block"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            <Button size="sm" className="w-full">
-              Sign up
-            </Button>
-          </Link>
-          <Link
-            href="/login"
+            href="/waitlist"
             className="block"
             onClick={() => setIsMenuOpen(false)}
           >
             <Button size="sm" className="w-full" variant="outline">
-              Login
+              Join the waitlist
             </Button>
           </Link>
         </div>

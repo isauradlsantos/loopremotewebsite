@@ -38,9 +38,9 @@ const navigation = [
 ];
 
 const socialLinks = [
-  { icon: Instagram, href: 'https://instagram.com' },
-  { icon: Linkedin, href: 'https://linkedin.com' },
-  { icon: Slack, href: 'https://slack.com' },
+  { icon: Instagram, href: 'https://www.instagram.com/loopremotecoworking' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/company/loop-remote/' },
+  { icon: Slack, href: 'https://loopremote.slack.com/' },
 ];
 
 export const Footer = () => {
