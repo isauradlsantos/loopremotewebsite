@@ -41,7 +41,7 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "I am a million things at the same time: I work with amazing clients on driving growth to their businesses, I manage my own business, and I am a recording artist. It's fun!",
+      "I am a million things at the same time: I work with amazing clients on driving growth to their businesses, I manage my own business, and I am a recording artist. It\'s fun!",
     author: 'Isaura Santos',
     company: 'Fractional Marketing, Operations, and Business Consultant & Music Artist',
     image: '/images/homepage/testimonials/isaura-santos2.png',

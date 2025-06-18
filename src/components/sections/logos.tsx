@@ -5,15 +5,8 @@ import Link from 'next/link';
 
 const ITEMS = [
   {
-    name: 'Logo 1',
-    src: '/images/logos/new-logos/1.png',
-    width: 200,
-    height: 60,
-    href: '#',
-  },
-  {
-    name: 'Logo 3',
-    src: '/images/logos/new-logos/3.png',
+    name: 'Poolside',
+    src: '/images/logos/new-logos/pooliside.png',
     width: 200,
     height: 60,
     href: '#',
@@ -26,13 +19,6 @@ const ITEMS = [
     href: '#',
   },
   {
-    name: 'Logo 5',
-    src: '/images/logos/new-logos/5.png',
-    width: 200,
-    height: 60,
-    href: '#',
-  },
-  {
     name: 'Bio News',
     src: '/images/logos/new-logos/bionews.png',
     width: 200,
@@ -40,8 +26,22 @@ const ITEMS = [
     href: '#',
   },
   {
-    name: 'Close The Loop',
-    src: '/images/logos/new-logos/Close the loop-3.png',
+    name: 'Logo 5',
+    src: '/images/logos/new-logos/5.png',
+    width: 200,
+    height: 60,
+    href: '#',
+  },
+  {
+    name: 'Logo 3',
+    src: '/images/logos/new-logos/3.png',
+    width: 200,
+    height: 60,
+    href: '#',
+  },
+  {
+    name: 'Logo 1',
+    src: '/images/logos/new-logos/1.png',
     width: 200,
     height: 60,
     href: '#',
