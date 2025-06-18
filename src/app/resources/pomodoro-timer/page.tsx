@@ -55,7 +55,6 @@ export default function PomodoroTimer() {
     <div className="relative flex flex-col items-center justify-center min-h-screen bg-sand-100 overflow-hidden">
       {/* Decorative Orange Circles */}
       <div className="pointer-events-none select-none">
-        <div className="absolute top-[-60px] left-[-60px] w-48 h-48 bg-orange-400 opacity-30 rounded-full z-0" />
         <div className="absolute bottom-[-80px] right-[-80px] w-64 h-64 bg-orange-500 opacity-20 rounded-full z-0" />
         <div className="absolute top-1/2 left-[-40px] w-24 h-24 bg-orange-300 opacity-40 rounded-full z-0" style={{ transform: 'translateY(-50%)' }} />
         <div className="absolute bottom-24 right-1/3 w-16 h-16 bg-orange-200 opacity-30 rounded-full z-0" />

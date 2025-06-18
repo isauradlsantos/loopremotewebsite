@@ -73,7 +73,7 @@ const Navbar = () => {
   const bgColor =
     pathname === '/about'
       ? 'bg-mint-50'
-      : ['/', '/faq', '/signup', '/login'].includes(pathname)
+      : ['/', '/faq', '/signup', '/login', '/resources/pomodoro-timer'].includes(pathname)
         ? 'bg-sand-100'
         : 'bg-background';
 
