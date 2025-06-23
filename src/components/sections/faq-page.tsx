@@ -42,6 +42,11 @@ const faqItems: FAQItem[] = [
       'Our virtual lobby stays open all day, every day, so you can drop into any focus sprint. Async SCRUM check-ins let you stay aligned even when you can\'t join live.',
   },
   {
+    question: 'What happens if I don\'t attend sessions consistently?',
+    answer:
+      'Close The Loop prioritizes the group\'s dynamic and productivity. Regular attendance ensures everyone benefits from a motivated, engaged cohort. If you frequently miss sessions, you may lose your cohort spot. This preserves the high-performing team environment and ensures all members get the accountability and community they signed up for.',
+  },
+  {
     question: 'How do you match peers in the community?',
     answer:
       'Each week we hand-pick new members into cohorts based on:\n\nYour role, industry, and top goals\n\nTime-zone and preferred focus hours\n\nComplementary skills, experience level, and ambition',

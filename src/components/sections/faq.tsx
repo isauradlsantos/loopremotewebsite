@@ -40,6 +40,11 @@ const rightQuestions = [
       'Our virtual lobby stays open all day, every day, so you can drop into any focus sprint. Async SCRUM check-ins let you stay aligned even when you can\'t join live.',
   },
   {
+    question: 'What happens if I don\'t attend sessions consistently?',
+    answer:
+      'Close The Loop prioritizes the group\'s dynamic and productivity. Regular attendance ensures everyone benefits from a motivated, engaged cohort. If you frequently miss sessions, you may lose your cohort spot. This preserves the high-performing team environment and ensures all members get the accountability and community they signed up for.',
+  },
+  {
     question: 'Is there a money-back guarantee?',
     answer:
       'Yes. Commit for one month, and if you\'re not satisfied, we\'ll refund your full membership fee—no questions asked.',

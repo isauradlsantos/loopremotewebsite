@@ -68,12 +68,13 @@ const Navbar = () => {
     },
     { label: 'Pricing', href: '/pricing' },
     { label: 'FAQ', href: '/faq' },
+    { label: 'For Businesses', href: '/for-businesses' },
   ];
 
   const bgColor =
     pathname === '/about'
       ? 'bg-mint-50'
-      : ['/', '/faq', '/signup', '/login', '/resources/pomodoro-timer'].includes(pathname)
+      : ['/', '/faq', '/signup', '/login', '/resources/pomodoro-timer', '/for-businesses'].includes(pathname)
         ? 'bg-sand-100'
         : 'bg-background';
 
